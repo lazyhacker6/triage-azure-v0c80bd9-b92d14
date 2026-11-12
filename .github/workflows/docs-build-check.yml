@@ -1,0 +1,54 @@
+name: Docs Build Check
+
+# Build-only validation for the MkDocs site on pull requests targeting main.
+# This complements deploy-docs.yml (which deploys on push to main) by catching
+# broken docs before they merge. It never deploys and needs no write access.
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - docs/**
+      - overrides/**
+      - mkdocs.yml
+      - requirements-docs.txt
+      - requirements-planner-tests.txt
+      - scripts/planner/**
+      - tests/planner/**
+      - tests/home/**
+      - main.py
+      - .github/workflows/docs-build-check.yml
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: 3.11
+
+      - name: Install MkDocs and dependencies
+        run: |
+          pip install -r requirements-docs.txt -r requirements-planner-tests.txt
+          python -m playwright install --with-deps chromium
+
+      # Strict build: the docs tree is clean of warnings, so --strict is enabled
+      # to catch any new issues (broken links, pages not in nav, bad image paths)
+      # before they merge. The intentionally off-nav pages are listed under
+      # not_in_nav in mkdocs.yml so they do not trip the check.
+      - name: Build documentation
+        run: |
+          python scripts/planner/validate_catalog.py
+          python -m unittest discover -s tests/planner -p "test_*.py"
+          mkdocs build --strict
+          python tests/planner/browser_checks.py
+          python tests/home/browser_checks.py
