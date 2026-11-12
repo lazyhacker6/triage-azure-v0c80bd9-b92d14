@@ -1,0 +1,6553 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for AI Landing Zones">
+      
+      
+        <meta name="author" content="Microsoft">
+      
+      
+      
+        <link rel="prev" href="../customize-components/">
+      
+      
+        <link rel="next" href="../inline-visuals-contract/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../media/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>API reference - AI Landing Zones</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css?v=1c00770bdd86">
+    
+      <link rel="stylesheet" href="../../stylesheets/planner.css?v=3">
+    
+      <link rel="stylesheet" href="../../stylesheets/diagrams.css?v=2">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Landing Zones" class="md-header__button md-logo" aria-label="AI Landing Zones" data-md-component="logo">
+      
+  <img src="../../media/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Landing Zones
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Azure/AI-Landing-Zones" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Landing Zones" class="md-nav__button md-logo" aria-label="AI Landing Zones" data-md-component="logo">
+      
+  <img src="../../media/logo.svg" alt="logo">
+
+    </a>
+    AI Landing Zones
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Azure/AI-Landing-Zones" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Landing Zone
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Landing Zone
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whats-new/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What's new
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment choices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/design-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-isolation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sizing-cost-planner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sizing & cost planner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deploy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_1" id="__nav_2_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bicep
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bicep
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-infra-only/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy infra only
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-full-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy full stack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terraform
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-terraform-infra-only/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy infra only
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-terraform-full-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy full stack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy via portal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azure-devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_5" id="__nav_2_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Companion guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Companion guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../private-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Private access (VPN)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PostgreSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operate
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operate
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updates & recovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resource-naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resource naming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Application
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Application
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_2" id="__nav_2_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hosted-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hosting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents & prompts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows & human input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools & MCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-app-mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent App MCP Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_3" id="__nav_2_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat & channels
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chat & channels
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inline-visuals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inline visuals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sign-in & access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conversations & files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../embed-chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Embed chat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish-to-teams/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teams & Microsoft 365
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect-copilot-studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_4" id="__nav_2_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge & retrieval
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Knowledge & retrieval
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../foundry-iq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundry IQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-iq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work IQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fabric-iq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fabric IQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharepoint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SharePoint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nl2sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NL2SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_5" id="__nav_2_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Document ingestion
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Document ingestion
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ingestion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multimodality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Document formats & images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ingestion-jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jobs & schedules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_6" id="__nav_2_8_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application-monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring & audit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agentops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AgentOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_8" id="__nav_2_8_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development & customization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development & customization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../local-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run locally
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customize-components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customize components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#select-the-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select the surface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-call-an-application-api-safely" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to call an application API safely
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-execution-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Native execution contracts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Native execution contracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-hosted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundry Hosted
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-apps-and-dts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container Apps and DTS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-and-failure-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State and failure boundaries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingestion-document-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestion document APIs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingestion document APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chunk-a-source-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chunk a source document
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate embeddings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-supplied-document-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Index supplied document records
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieval preview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-endpoint-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Native endpoint boundary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingestion-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestion administration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingestion administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declared-ingestion-administrative-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declared ingestion administrative surface
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-ui-sessions-and-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Native UI sessions and actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Native UI sessions and actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-send-an-owner-bound-conversational-turn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to send an owner-bound conversational turn
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operator-metrics-and-corpus-curation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operator metrics and corpus curation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-browser-and-download-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI browser and download routes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inline-visuals-contract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inline visual contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests & quality checks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-your-own-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bring your own app
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Gateway Landing Zone
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI Gateway Landing Zone
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/whats-new/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What's new
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/plan/governance-hub-benefits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benefits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citadel Blueprint
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Citadel Blueprint
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/blueprint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/blueprint/layer-1-governance-hub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer 1 · Governance Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/blueprint/layer-2-agent-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer 2 · Agent Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/blueprint/layer-3-agent-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer 3 · Agent Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/blueprint/layer-4-security-foundation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer 4 · Security Foundation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/blueprint/organizational-alignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organizational alignment & ownership
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/blueprint/activation-paths/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical activation paths
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_8" id="__nav_3_4_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Original platform guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Original platform guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/blueprint/platform-technical-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/blueprint/platform-waf-alignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Well-Architected alignment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plan
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_1" id="__nav_3_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Infrastructure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/deploy/bicep-parameter-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameters (Bicep)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/plan/network-approach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network approach
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capacity planning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Capacity planning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/plan/sizing-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Citadel sizing guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/plan/ptu-estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PTU estimation guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/observability/ai-search-cost-estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Search cost estimation logic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_3" id="__nav_3_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resilience & business continuity
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resilience & business continuity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/resiliency/resiliency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resiliency guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/resiliency/business-continuity-dr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business continuity & DR guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/observability/throttling-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throttling events handling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/observability/app-insights-alerting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    App Insights alerting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/operate/cosmos-multi-region-sync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cosmos global multi-master sync
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deploy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Deploy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bicep
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bicep
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/deploy/bicep-quick-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick deployment guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/deploy/bicep-full-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full deployment guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_1_3" id="__nav_3_6_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_6_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Post deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/operate/post-deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post-deployment guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/validation/notebook-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation notebook setup guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/validation/notebooks-bicep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation notebooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/validation/notebook-snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebook snippets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/operate/developer-vpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer VPN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terraform
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/deploy/terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/deploy/terraform-quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/deploy/terraform-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variables guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/deploy/terraform-deployment-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full deployment guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/deploy/terraform-policy-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APIM policy architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_2_6" id="__nav_3_6_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_6_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Post deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/validation/notebooks-terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation notebooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operate
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operate
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_1" id="__nav_3_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Observe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/observability/platform-observability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform observability guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/observability/power-bi-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Power BI dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_2" id="__nav_3_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend contracts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Backend contracts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_2_1" id="__nav_3_7_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bicep
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_7_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bicep
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/backend-contracts-bicep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM backend onboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/apis/unified-ai-api-onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unified AI API type onboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/backend-bicep-modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bicep module reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_2_2" id="__nav_3_7_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_7_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terraform
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/backend-contracts-terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM backend onboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_3" id="__nav_3_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Access contracts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Access contracts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/access-contracts-bicep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/access-contracts-quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/access-contracts-policies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Access contract policies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/access-contracts-resiliency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resiliency guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/apis/llm-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM access guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/apis/openai-compatible-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenAI-compatible API guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/access-contracts-key-rotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Key rotation guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/security/entra-id-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entra ID setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/security/entra-id-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entra ID auth validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/security/jwt-client-identity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JWT client identity permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/security/pii-masking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PII anonymization & deanonymization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/security/agent-governance-toolkit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Governance Toolkit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_3_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_3_13" id="__nav_3_7_3_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terraform
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_7_3_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_3_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terraform
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/access-contracts-terraform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operate access contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_4" id="__nav_3_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publish contracts (preview)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Publish contracts (preview)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/publish-contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/contracts/publish-contract-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publish contract guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_5" id="__nav_3_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gateway upgrade
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gateway upgrade
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/operate/gateway-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APIM gateway upgrade (preview)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/operate/gateway-ecosystem-upgrade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gateway ecosystem upgrade guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/operate/release-version-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release version management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-gateway-landing-zone/operate/foundry-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundry integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatisnew/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What's New
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#select-the-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select the surface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-call-an-application-api-safely" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to call an application API safely
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-execution-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Native execution contracts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Native execution contracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundry-hosted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundry Hosted
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-apps-and-dts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container Apps and DTS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-and-failure-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State and failure boundaries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingestion-document-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestion document APIs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingestion document APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chunk-a-source-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chunk a source document
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate embeddings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-supplied-document-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Index supplied document records
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieval preview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-endpoint-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Native endpoint boundary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingestion-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestion administration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingestion administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declared-ingestion-administrative-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declared ingestion administrative surface
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-ui-sessions-and-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Native UI sessions and actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Native UI sessions and actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-send-an-owner-bound-conversational-turn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to send an owner-bound conversational turn
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operator-metrics-and-corpus-curation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operator metrics and corpus curation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-browser-and-download-routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI browser and download routes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="api-reference">API reference</h1>
+<p>Use this reference when writing a client or changing a component boundary.
+Native Hosted execution, durable execution, ingestion and UI product APIs are
+different contracts. A bearer accepted by one surface does not automatically
+authorize another.</p>
+<p>For identity setup, use <a href="../application-auth/">Sign-in &amp; access</a>.
+For settings, schedules, administration and recovery, use
+<a href="../application-settings/">Application settings</a>,
+<a href="../ingestion-jobs/">Jobs &amp; schedules</a>, <a href="../operations/">Administration</a>, and
+<a href="../application-monitoring/">Monitoring &amp; audit</a>.
+Examples below illustrate requests, not authorization to run them against
+production. Do not put keys or tokens in source, browser code or logs.</p>
+<h2 id="select-the-surface">Select the surface</h2>
+<table>
+<thead>
+<tr>
+<th>Surface</th>
+<th>Service</th>
+<th>Authentication boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native Responses and managed session operations</td>
+<td>Foundry Hosted</td>
+<td>Foundry ingress authentication, trusted invocation context and separate source/tool authorization</td>
+</tr>
+<tr>
+<td>Native durable client operations</td>
+<td>Container Apps worker and DTS</td>
+<td>Identity-based scheduler access plus the authenticated BFF's owner checks</td>
+</tr>
+<tr>
+<td><code>/document-chunking</code>, <code>/text-embedding</code>, <code>/ingest-documents</code></td>
+<td>Ingestion</td>
+<td><code>X-API-KEY</code>, not a delegated-user replacement</td>
+</tr>
+<tr>
+<td><code>/retrieve</code></td>
+<td>Ingestion preview</td>
+<td>Separately gated delegated user bearer</td>
+</tr>
+<tr>
+<td><code>/api/*</code>, <code>/api/panel/*</code></td>
+<td>Ingestion administration</td>
+<td>Mode-specific mounting and distinct admin gates</td>
+</tr>
+<tr>
+<td><code>/api/native/*</code></td>
+<td>Authenticated UI/BFF</td>
+<td>Enabled application, owner-bound UI session ID and feature gates</td>
+</tr>
+<tr>
+<td><code>/panel/overview/metrics</code>, <code>/panel/corpus-curation/*</code></td>
+<td>Ingestion</td>
+<td>Explicit operator role/group and feature gates</td>
+</tr>
+</tbody>
+</table>
+<p>JSON errors commonly contain <code>detail</code>, but ingestion skill endpoints also
+return record errors and some plain-text <code>400</code> responses. Do not impose one
+error parser on all routes. An error after a streaming response has started
+must be read from the stream, even if the HTTP status was <code>200</code>.</p>
+<h2 id="how-to-call-an-application-api-safely">How to call an application API safely</h2>
+<ol>
+<li><strong>After provision/deploy</strong>, take the endpoint from the selected environment's
+   published outputs or application publication. The UI, ingestion and Hosted
+   endpoints are different services; do not construct one from another's URL.</li>
+<li>Select the route and authentication boundary in the table above. Use
+   <a href="../application-auth/">Sign-in &amp; access</a> to obtain the correct delegated
+   audience or service credential. Never send an ingestion API key as native
+   session authentication.</li>
+<li>Use a development identity and synthetic input. Session creation, turns,
+   configuration writes and ingestion calls are mutations, not health probes.</li>
+<li>Validate status <strong>and</strong> the route's result envelope. For records, inspect
+   each error and confirmed count; for native work, observe progress/completion.</li>
+<li>Test a nonowner or denied user. Reload current state after an uncertain
+   native outcome before retrying; do not replay a model request under broader
+   credentials to bypass a denial.</li>
+</ol>
+<p>Configuration and resource grants must already be applied through their owning
+lifecycle. An API request does not provision a metadata container, consent a
+source or register a tool.</p>
+<h2 id="native-execution-contracts">Native execution contracts</h2>
+<p>The application uses explicit host-specific clients, not one universal state
+or request SDK. Select <code>APPLICATION_MODE</code> and <code>ORCHESTRATION_HOST</code> through
+deployment composition. UI session creation selects an already enabled
+application; it does not change the deployment's host or mode.</p>
+<p>Tools, including optional MCP NL2SQL, are registered capabilities rather
+than strategy keys.
+With the <code>nl2sql</code> toolset explicitly selected, the Agent/Workflow calls <code>nl2sql.list_sources()</code> and
+<code>nl2sql.query(source_id, question)</code> on the separate Agent App MCP Server;
+these are not browser-to-SQL APIs. See <a href="../nl2sql/#results-and-execution-limits">NL2SQL results</a>
+for the versioned typed result and <a href="../application-settings/#agent-app-mcp-contract">MCP settings</a>
+for authenticated transport.</p>
+<p>UI feedback belongs to the product
+metadata service, not a feedback-shaped model invocation.</p>
+<h3 id="foundry-hosted">Foundry Hosted</h3>
+<p>Use the official Responses hosting integration and the selected publication's
+native client types. Hosted conversational and workflow applications are
+separate publications with separate endpoints when both are selected:
+<code>HOSTED_AGENT_BASE_URL</code> and <code>HOSTED_WORKFLOW_BASE_URL</code>.</p>
+<p>Conversation context is native server state. The client sends new input with
+the native reference returned by the selected integration; it does not replay
+a Chainlit transcript as a substitute for persistence. The application does
+not force all requests into stateless execution.</p>
+<p>Workflow start sends JSON containing <code>topic</code> (at most 8,000 characters), with
+<code>store=true</code>. Pending review is the native <code>function_call</code> named <code>request_info</code>;
+decode its <code>arguments.request</code>. Reply using <code>previous_response_id</code> and native
+<code>function_call_output</code> with the actual <code>call_id</code>, carrying the JSON business
+reply <code>{"decision":"approve","comment":"Reviewed"}</code>. Decision is <code>approve</code>
+or <code>reject</code>, and comment is at most 4,000 characters. Terminal output is the
+typed <code>ResearchReviewResult</code> in <code>structured_outputs</code>.</p>
+<p>A reply must match the intended run and currently pending request. A free-form
+chat message or fabricated event must not be interpreted as an approval.</p>
+<p>Foundry authenticates ingress. Request-aware factories use trusted invocation
+context and current source/tool authorization. A service bearer, arbitrary
+metadata or known session ID does not establish end-user ownership.
+Search and Work IQ delegation are distinct credentials, not interchangeable
+tool arguments. See <a href="../application-auth/">Sign-in &amp; access</a>.</p>
+<p>Parse the selected SDK's native response and streaming events. An event or
+partial text is not evidence of successful terminal completion.
+Do not synthesize a second Responses event protocol or infer a text framing
+format independent of the selected SDK.</p>
+<h3 id="container-apps-and-dts">Container Apps and DTS</h3>
+<p>Use the official Durable Extension client against the provisioned
+<code>DURABLE_TASK_SCHEDULER_CONNECTION_STRING</code>. The nonsecret managed-identity
+binding and registered agent/workflow names must match the worker.
+Use actual outputs, not guessed scheduler endpoints.</p>
+<p>The standalone worker registers the selected native Agent and Workflow.
+It does not require public worker HTTP ingress or an Azure Functions app,
+and it does not expose an imitation Hosted Responses server.
+Agent sessions, workflow execution and pending human input belong to DTS.</p>
+<p>The BFF authenticates the user and checks its owner mapping before native
+reads, continuation or human replies. Scheduler RBAC authenticates a service
+connection, not a product user. IDs are selectors, not capabilities.
+Durable progress need not provide Hosted per-token streaming parity.</p>
+<p>The native DTS agent entity version is <code>2</code>. Keep client and worker registration
+names aligned: <code>agent-lz-conversation</code> and <code>agent-lz-research-review</code>.
+Native outputs can contain typed lists/yields; use the runtime's
+<code>native.contracts</code> codecs rather than flattening them into invented text or
+a universal state envelope.</p>
+<h3 id="state-and-failure-boundaries">State and failure boundaries</h3>
+<p>UI display metadata and feedback are separate from native session/checkpoint
+state. A failed native read must not become a successful empty history.
+Do not manually append a UI transcript to a second conversation store.
+See <a href="../conversations/">Conversations &amp; files</a> and
+<a href="../workflows/">Workflows &amp; human input</a>.</p>
+<p>Validate call shapes against installed published SDKs and exact application
+entrypoints. Local SDK/contract tests do not prove deployed checkpoint
+durability, source access, tenant isolation or private routing.
+Authentication/source denials must not trigger automatic model replay or a
+retry under broader workload permissions.</p>
+<h2 id="ingestion-document-apis">Ingestion document APIs</h2>
+<p>All three document endpoints require <code>X-API-KEY</code>.
+The validator accepts <code>DATA_INGEST_APP_APIKEY</code> and its supported alias
+<code>INGESTION_APP_APIKEY</code>. Invalid supplied keys return <code>401</code>. The shipped
+API-key security dependency rejects a missing header with <code>403</code>.
+Credential-based Azure SDK access does not make these HTTP routes keyless.</p>
+<p>These are JSON record envelopes, not multipart uploads.
+Record errors are arrays of objects such as <code>{"message":"..."}</code>.
+Inspect them even on HTTP <code>200</code>.</p>
+<h3 id="chunk-a-source-document">Chunk a source document</h3>
+<p><code>POST /document-chunking</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nt">"recordId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"document-1"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"documentUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://&lt;storage-account&gt;.blob.core.windows.net/&lt;container&gt;/policy.pdf"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"documentContentType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/pdf"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>values</code> must be nonempty. Each item requires string <code>recordId</code> and
+<code>data.documentUrl</code>/<code>data.documentContentType</code>.
+<code>documentSasToken</code> is an optional schema field, not a replacement for the
+Blob client's configured access. The handler downloads the document through
+that client. <strong>If multiple records are supplied, only the last is processed.</strong>
+Use one record per request.</p>
+<p>Success returns <code>{"values":[{"recordId":"document-1","data":{"chunks":[]},
+"errors":[],"warnings":[]}]}</code> with actual chunks in <code>data.chunks</code>.
+Malformed JSON, schema errors and missing values return <code>400</code>.
+Chunking failures can be represented as record errors.</p>
+<h3 id="generate-embeddings">Generate embeddings</h3>
+<p>An embedding is a numeric vector representing text for similarity search.
+<code>POST /text-embedding</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"values"</span><span class="p">:[{</span><span class="nt">"recordId"</span><span class="p">:</span><span class="s2">"text-1"</span><span class="p">,</span><span class="nt">"data"</span><span class="p">:{</span><span class="nt">"text"</span><span class="p">:</span><span class="s2">"Retention policy summary"</span><span class="p">}}]}</span>
+</code></pre></div>
+<p>The response uses <code>values[]</code> with <code>recordId</code>, <code>data.embedding</code>, <code>errors</code>,
+and <code>warnings</code>. A failed record has an error and may have empty <code>data</code>.
+Invalid JSON or a missing <code>values</code> field returns <code>400</code>.
+This handler does not share the strict schema of <code>/ingest-documents</code>.</p>
+<p><span id="ingest-conversation-documents"></span></p>
+<h3 id="index-supplied-document-records">Index supplied document records</h3>
+<p><code>POST /ingest-documents</code> chunks, embeds and uploads records to Search:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"conversationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"an-authorized-conversation-id"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"securityUserIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"&lt;authenticated-uploader-object-id&gt;"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nt">"recordId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"attachment-1"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"note.txt"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"contentType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/plain"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"fileBase64"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SGVsbG8="</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>conversationId</code> is nonempty. <code>values</code> contains <code>1..5</code> records with nonempty
+<code>recordId</code>, <code>fileName</code>, <code>contentType</code> and <code>fileBase64</code>.
+The schema rejects unknown fields at the envelope, record and data levels.</p>
+<p><code>securityUserIds</code> is optional in the wire schema. The trusted caller must
+derive any uploader ACL from authenticated identity, not user-entered IDs.
+An API key alone does not establish user ownership.</p>
+<p>This separate ingestion API is not the native UI attachment path. Native
+private attachments do not dispatch files here or publish them into Search.</p>
+<p>Response example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"values"</span><span class="p">:[{</span><span class="nt">"recordId"</span><span class="p">:</span><span class="s2">"attachment-1"</span><span class="p">,</span><span class="nt">"indexedChunks"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">"errors"</span><span class="p">:[],</span><span class="nt">"warnings"</span><span class="p">:[]}]}</span>
+</code></pre></div>
+<p><code>indexedChunks</code> counts Search-confirmed uploads, not attempted chunks.
+Validation failures return <code>400</code>. Chunking, embedding, partial Search writes,
+and optional original-Blob persistence can produce per-record errors/warnings.
+An HTTP <code>200</code> with zero confirmed chunks is not successful indexing.</p>
+<h2 id="retrieval-preview">Retrieval preview</h2>
+<p><code>POST /retrieve</code> is separately gated by both <code>HOSTED_RETRIEVAL_ENABLED</code> and
+<code>HOSTED_RETRIEVAL_INV_002_VALIDATED</code>, default <code>false</code>.
+It returns <code>503</code> until both are enabled. The validation setting is an operator
+attestation of isolated authorization testing, not an automatic readiness test.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"query"</span><span class="p">:</span><span class="s2">"invoice retention policy"</span><span class="p">,</span><span class="nt">"top"</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+</code></pre></div>
+<p>Only <code>query</code> and optional <code>top</code> are accepted. Query text is trimmed, nonblank
+and <code>1..1000</code> characters. <code>top</code> is <code>1..10</code>, default <code>5</code>.
+Identity, groups and index selection are server-owned, not request fields.</p>
+<p>Send a delegated user bearer for the configured
+<code>HOSTED_RETRIEVAL_TOKEN_AUDIENCE</code>. Toolbox must pass the user's token through.
+The service uses its own Search credential for transport and forwards the
+user token unchanged in Search's <code>x-ms-query-source-authorization</code>.
+Neither a static key nor managed identity alone replaces that user token.</p>
+<p>The response is <code>{"results":[...],"count":n}</code>. Each result has <code>id</code>,
+<code>content</code>, and optional <code>title</code>, <code>url</code>, <code>category</code>, <code>source</code> and <code>score</code>.
+It excludes ACL/vector fields and caps content at 8,000 characters.
+Missing/invalid bearer returns <code>401</code>, non-delegated/app-only identity <code>403</code>,
+schema/bounds violations <code>422</code>, missing configuration <code>500</code>, and sanitized
+Search failures <code>502</code>. Cleanup failure can still fail an otherwise completed
+query.</p>
+<h2 id="native-endpoint-boundary">Native endpoint boundary</h2>
+<p><code>python -m native.hosted</code> serves native Hosted execution.
+<code>python -m native.durable</code> starts the standalone worker without public HTTP
+ingress. Neither mounts ingestion or UI product APIs. Use the native UI routes
+below, host-native clients and platform configuration tooling for their
+respective operations.</p>
+<h2 id="ingestion-administration">Ingestion administration</h2>
+<p>Ingestion administration is owned by the optional ingestion component.
+Its declared administrative surfaces are resolved at startup; native host
+and application mode are not alternative administration protocols.
+Jobs and document APIs are not disabled by hiding an operator UI.</p>
+<p>Ingestion admin reads do not all require Entra. The <code>require_admin</code>
+dependency used for job/config mutations permits development access when no
+tenant is configured. This is not the strict ingestion operator gate.
+In particular, the shipped file-unblock route does not carry an unconditional
+Admin dependency. Protect the whole service boundary deliberately.</p>
+<table>
+<thead>
+<tr>
+<th>Request</th>
+<th>Contract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET /api/version</code>, <code>GET /api/identity</code></td>
+<td>Version and browser authentication/role context</td>
+</tr>
+<tr>
+<td><code>GET /api/jobs</code>, <code>GET /api/files</code></td>
+<td><code>page</code> default <code>1</code>, <code>pageSize</code> <code>1..100</code> default <code>20</code>, <code>search</code>, <code>sortField</code>, <code>sortOrder</code> (<code>asc</code>/<code>desc</code>), <code>indexerType</code>. Files also accept <code>blocked</code>. Returns <code>items</code>, <code>total</code>, <code>page</code>, <code>pageSize</code>, <code>indexerTypes</code>.</td>
+</tr>
+<tr>
+<td><code>GET /api/jobs/queue</code></td>
+<td>Registered job state, scheduled time, in-flight run and latest-run information</td>
+</tr>
+<tr>
+<td><code>POST /api/jobs/{job_type}/run</code></td>
+<td>No body. <code>202</code> returns <code>jobType</code>, <code>triggerId</code>, <code>status:"queued"</code>. Invalid type format <code>400</code>, unknown type <code>404</code>, conflicting run <code>409</code>, enqueue failure <code>500</code>. Queued is not completed.</td>
+</tr>
+<tr>
+<td><code>POST /api/files/unblock?blobName=&lt;encoded-log-path&gt;</code></td>
+<td>No body. Resets a blocked file-log blob. Requires a path containing <code>/files/</code> and ending <code>.json</code>. Invalid path <code>400</code>, missing log <code>404</code>, read/write failure can return <code>500</code>.</td>
+</tr>
+<tr>
+<td><code>GET /api/config</code></td>
+<td>Curated <code>sections</code>, flat <code>settings</code>, <code>canEdit</code>, <code>authEnabled</code></td>
+</tr>
+<tr>
+<td><code>PUT /api/config</code></td>
+<td>Allowlisted settings only, for example <code>{"updates":[{"key":"CRON_RUN_SHAREPOINT_INDEX","value":"0 2 * * mon"}]}</code></td>
+</tr>
+<tr>
+<td><code>POST /api/config/reload</code></td>
+<td>Refreshes local caches, returns <code>{"status":"ok"}</code></td>
+</tr>
+<tr>
+<td><code>POST /api/config/apply</code></td>
+<td>Refreshes and reapplies schedules. Returns <code>status</code>, <code>rescheduled</code>, <code>note</code>, not a hard container restart. Schedule failures return <code>500</code> with failed/rescheduled keys.</td>
+</tr>
+</tbody>
+</table>
+<p>Configuration updates return <code>applied</code>, <code>failed</code> and <code>rescheduled</code>.
+All-success is <code>200</code>, partial success <code>207</code>, all-invalid/denied entries <code>422</code>,
+and all-write failure <code>500</code>. Confirmed writes remain applied if best-effort
+cache refresh fails. Schedule or write errors do not reverse earlier effects.
+Use <a href="../application-settings/">Application settings</a> for allowlists and refresh.
+Use the job types reported by the running service, not an invented job name.</p>
+<p><code>RUN_JOBS_ON_STARTUP</code> is not in this API's write allowlist; configure it
+before startup through the declared settings path.</p>
+<h3 id="declared-ingestion-administrative-surface">Declared ingestion administrative surface</h3>
+<p>When the ingestion component declares that administrative surface,
+<code>/api/panel/status</code> exposes nonsensitive
+<code>mode</code>, <code>panelEnabled</code> and <code>authEnabled</code> bootstrap metadata.
+Protected <code>/api/panel/*</code> routes require a validated bearer and exact <code>Admin</code>
+role, with <strong>no tenant-absent development bypass</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Request</th>
+<th>Contract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET /api/panel/overview</code></td>
+<td>Ingestion jobs/files and feedback aggregates</td>
+</tr>
+<tr>
+<td><code>GET /api/panel/feedback?conversationId=&lt;id&gt;</code></td>
+<td>Optional conversation filter, returns a list of feedback records</td>
+</tr>
+<tr>
+<td><code>POST /api/panel/feedback</code></td>
+<td>Strict body shown below, returns a record with generated <code>id</code>, <code>createdBy</code> and <code>createdAt</code>, status <code>201</code></td>
+</tr>
+<tr>
+<td><code>GET /api/panel/conversations/{conversation_id}/history</code></td>
+<td>Returns <code>501</code>. Ingestion does not retrieve managed chat message bodies.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"conversationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"an-existing-conversation-id"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"messageId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"message-1"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">"up"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Useful grounding."</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"reviewed"</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>conversationId</code> is required and bounded to 256 characters.
+<code>rating</code> is <code>up</code> or <code>down</code>. Optional <code>messageId</code> is at most 256 characters,
+<code>comment</code> 4,000 and <code>tags</code> at most 16 strings of at most 64 characters.
+Unknown fields fail validation. Invalid input returns <code>422</code>, denied role
+<code>403</code>, and Cosmos failures or invalid stored records return sanitized <code>502</code>.
+This admin feedback shape is not the UI owner-feedback contract below.</p>
+<h2 id="native-ui-sessions-and-actions">Native UI sessions and actions</h2>
+<p>All native product routes are under <code>/api/native</code>. They authenticate the
+current user and bind a server-created UI UUID to that owner and the selected
+host's native references. A native reference is not the UI session ID and
+neither is authorization.
+Unknown or nonowned IDs return opaque <code>404</code> <strong>before backend access</strong>.
+Stale or duplicate actions return <code>409</code>.</p>
+<h3 id="how-to-send-an-owner-bound-conversational-turn">How to send an owner-bound conversational turn</h3>
+<p><strong>After application deployment</strong>, authenticate as the intended user and create
+a session on the <strong>UI/BFF</strong> endpoint:</p>
+<div class="highlight"><pre><span></span><code><span class="err">POST /api/native/sessions</span>
+<span class="err">Authorization: Bearer &lt;delegated-UI-API-token&gt;</span>
+<span class="err">Content-Type: application/json</span>
+
+<span class="err">{"application":"conversational"}</span>
+</code></pre></div>
+<p>Use the returned UI <code>id</code> in the next request, with the same owner's
+authenticated context:</p>
+<div class="highlight"><pre><span></span><code><span class="err">POST /api/native/sessions/&lt;returned-id&gt;/turns</span>
+<span class="err">Authorization: Bearer &lt;delegated-UI-API-token&gt;</span>
+<span class="err">Content-Type: application/json</span>
+
+<span class="err">{"text":"Read this short note.","attachments":[{"name":"note.txt","content_type":"text/plain","data_base64":"SGVsbG8="}]}</span>
+</code></pre></div>
+<p>Attachments require
+<a href="../ingestion/#how-to-enable-private-conversational-input">prior feature/resource setup</a>.
+Omit <code>attachments</code> for a text-only turn. Expect <code>response</code> and <code>native_ref</code>,
+not a new UI ID. A different user's request using that ID must receive opaque
+<code>404</code> before the native backend is called. No ingestion URL or API key
+participates in this path.</p>
+<table>
+<thead>
+<tr>
+<th>Request</th>
+<th>Contract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST /api/native/sessions</code></td>
+<td><code>application</code> is <code>conversational</code> or <code>workflow</code>; <code>201</code> returns <code>id</code>, <code>application</code>, <code>title</code>, <code>created_at</code> with an owner-bound UI UUID</td>
+</tr>
+<tr>
+<td><code>GET /api/native/sessions</code></td>
+<td>Saved session listing; gated by <code>ENABLE_CHAT_HISTORY</code></td>
+</tr>
+<tr>
+<td><code>POST /api/native/sessions/{id}/turns</code></td>
+<td>Nonblank <code>text</code> of <code>1..8000</code> characters and optional <code>attachments</code>; returns <code>response</code> and <code>native_ref</code></td>
+</tr>
+<tr>
+<td><code>POST /api/native/sessions/{id}/start</code></td>
+<td><code>202</code> starts the workflow with <code>topic</code></td>
+</tr>
+<tr>
+<td><code>GET /api/native/sessions/{id}/progress</code></td>
+<td>Returns <code>{id,status,pending,revision,output}</code></td>
+</tr>
+<tr>
+<td><code>POST /api/native/sessions/{id}/actions</code></td>
+<td><code>request_id</code>, <code>revision</code> and typed <code>response</code> must match current pending state; <code>202</code> returns progress</td>
+</tr>
+<tr>
+<td><code>GET /api/native/sessions/{id}/history</code></td>
+<td>Native history read; gated by <code>ENABLE_CHAT_HISTORY</code></td>
+</tr>
+<tr>
+<td><code>POST /api/native/sessions/{id}/resume</code></td>
+<td>Resumes a known owner-bound session; known workflow resume remains available with saved history off</td>
+</tr>
+<tr>
+<td><code>POST /api/native/sessions/{id}/feedback</code></td>
+<td><code>native_ref</code>, rating <code>-1</code> or <code>1</code>, optional comment at most 2,000 characters; <code>201</code> persists feedback; gated by <code>ENABLE_USER_FEEDBACK</code></td>
+</tr>
+</tbody>
+</table>
+<p>Request bodies reject unknown fields. <code>request_id</code> and <code>native_ref</code> are
+<code>1..512</code> characters; revision is the current 64-character lowercase hexadecimal
+UI revision, not the DTS entity version.</p>
+<p>Missing/invalid bearer returns <code>401</code>, nondelegated or denied access <code>403</code>,
+invalid input <code>422</code>, unavailable feature/dependency <code>503</code>, and sanitized native
+dependency failure <code>502</code>.</p>
+<p>Use <code>request_id</code> and <code>revision</code> from current progress, not a cached browser
+action. Delivery reported as <strong>submitted</strong> does not mean the durable worker
+admitted the reply or completed execution. Read progress to observe the actual
+native result. Do not invent an exactly-once business-write guarantee.</p>
+<p>Conversation turns can carry at most three attachments, each at most 64 KiB:
+UTF-8 TXT/Markdown, PDF, PNG or JPEG. Each entry contains
+<code>{name,content_type,data_base64}</code> and is subject to strict Base64, format/signature
+and owner validation. The larger of the Hosted and DTS serialized inline
+envelopes must be at most <strong>256 KiB</strong>, including text, JSON escaping, filenames,
+MIME metadata and Base64/data-URI expansion. This is not a raw-file-size sum.</p>
+<p>Attachments are supported for conversational operation
+in <code>conversational</code> or <code>both</code>, not workflow input.</p>
+<p>Hosted uses official <code>input_file</code>/image inputs; DTS uses native
+<code>context_messages</code> and IDs. There is no attachment Blob URL, SAS, ingestion
+dispatch or corporate publication. Transport tests do not establish model
+PDF/image understanding.</p>
+<p>Workflow mode, <code>both</code> or any enabled history, feedback or attachment flag
+selects Cosmos UI metadata. Its <code>/principal_id</code> partition is <code>tid:oid</code>.
+Metadata holds descriptors and references, not bytes, transcripts or tokens.
+With conversational mode and every product flag off, bounded volatile owner
+maps are lost on UI restart; persisted host state alone cannot restore them.</p>
+<h2 id="operator-metrics-and-corpus-curation">Operator metrics and corpus curation</h2>
+<p>These ingestion routes are registered independently and return <code>503</code> unless
+the ingestion component's declared operator surface, <code>PANEL_OPERATOR_SURFACES_ENABLED</code>, an explicit
+<code>PANEL_OPERATOR_APP_ROLE</code> or <code>PANEL_OPERATOR_GROUP_ID</code>, and the
+<code>DATA_INGEST_APP_APIKEY</code> cursor-signing secret are configured.
+They require a validated delegated user with the configured role or group.
+App-only tokens return <code>403</code>.</p>
+<p>These are component contracts, <strong>not an activation procedure</strong> for the current
+native platform. Its lifecycle keeps <code>PANEL_OPERATOR_SURFACES_ENABLED=false</code>
+and does not accept the component's panel-mount flags as native deployment
+selectors. Do not bypass that ownership by writing flags in the portal.
+See <a href="../operations/">Administration</a> for available operator surfaces.</p>
+<table>
+<thead>
+<tr>
+<th>Request</th>
+<th>Contract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET /panel/overview/metrics</code></td>
+<td>Returns <code>schema_version:1</code>, <code>generated_at</code>, <code>correlation_id</code>, and <code>counts</code> with conversation, feedback, pending-corpus and decided-corpus counts</td>
+</tr>
+<tr>
+<td><code>GET /panel/corpus-curation/queue?cursor=&lt;opaque&gt;</code></td>
+<td>Returns <code>items</code> and nullable <code>next_cursor</code>. Items have <code>item_id</code>, <code>document_id</code>, <code>title</code>, <code>reason_code</code>, <code>submitted_at</code>.</td>
+</tr>
+<tr>
+<td><code>POST /panel/corpus-curation/{item_id}/decision</code></td>
+<td>Body <code>{"decision":"approve","note":"Reviewed source"}</code>. Decision is <code>approve</code>, <code>reject</code> or <code>defer</code>, optional note at most 2,000 characters. Returns <code>item_id</code>, <code>decision</code>, <code>decided_at</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Small metric buckets below <code>PANEL_OVERVIEW_MIN_CARDINALITY</code>, default <code>5</code>,
+are suppressed as <code>null</code>, not zero. Curation operates on blocked-file logs
+in Blob, not chat messages. Signed cursors expire after
+<code>PANEL_CURSOR_TTL_SECONDS</code>, default <code>600</code>, and are caller-bound.
+Missing/invalid bearer returns <code>401</code>, role/group denial <code>403</code>, unknown item
+<code>404</code>, invalid/conflicting decisions or invalid/expired/cross-user cursor
+<code>422</code>, and data-store failures <code>502</code>.</p>
+<h2 id="ui-browser-and-download-routes">UI browser and download routes</h2>
+<p>The UI also owns these browser/session endpoints, not general-purpose
+substitutes for the service APIs above:</p>
+<ul>
+<li><code>GET /auth/oauth/azure-ad</code> and
+  <code>GET /auth/oauth/azure-ad/callback</code> implement configured-tenant sign-in.</li>
+<li><code>GET /api/auth/recovery?ticket=&lt;encrypted&gt;</code> continues explicit protected-source
+  sign-in using an encrypted, principal/login-bound, short-lived context.
+  It does not replay a model request or download.</li>
+<li><code>POST /copilot/auth/bootstrap</code>, <code>POST /copilot/auth/recovery</code>, and
+  <code>POST /copilot/auth/logout</code> belong to the
+  <a href="../embed-chat/">embedding protocol</a>. Preserve its exact-origin and opaque
+  session requirements instead of calling them as backend service auth.</li>
+<li><code>GET /api/download/{grant_token}</code> uses a server-issued signed grant plus the
+  current authenticated principal/session. It is not a URL-fetch proxy.
+  Native protected downloads recheck user/source authorization.
+  Invalid grants do not establish access to a container or conversation.</li>
+</ul>
+<p>Use <a href="../conversations/">Conversations &amp; files</a> for file limits, continuity and
+download policy, and <a href="../application-auth/">Sign-in &amp; access</a> for recovery
+expiry and no-replay behavior.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <div style="
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  text-align: center;
+  font-size: 0.95em;
+  padding: 1em 0;
+">
+  © 2026 Azure AI Landing Zones
+</div>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.icon", "content.iconify", "navigation.tracking", "content.code.annotate", "navigation.top"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/diagrams.js?v=2"></script>
+      
+    
+  </body>
+</html>
